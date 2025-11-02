@@ -1,0 +1,89 @@
+# =========================================
+# 🐍 .gitignore — Projet Python (PyTorch / ML)
+# =========================================
+
+# --- Environnements virtuels ---
+venv/
+env/
+.venv/
+.env/
+
+# --- Fichiers de cache Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Fichiers de logs / debug ---
+*.log
+*.out
+*.err
+
+# --- Configs locales / secrets ---
+*.env
+.env.*
+config.local.*
+settings_local.py
+
+# --- Dossiers temporaires ---
+tmp/
+temp/
+.cache/
+.ipynb_checkpoints/
+profile_default/
+__pypackages__/
+
+# --- Données d'entraînement ou de test ---
+data/
+datasets/
+inputs/
+outputs/
+results/
+checkpoints/
+runs/
+logs/
+models/
+experiments/
+
+# --- Poids de modèles / fichiers lourds ---
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.h5
+*.joblib
+*.pkl
+*.npy
+*.npz
+
+# --- Notebooks temporaires ---
+*.ipynb_checkpoints
+*.nbconvert.ipynb
+
+# --- IDE / outils ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Build / distribution ---
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- OS spécifiques ---
+.DS_Store
+Thumbs.db
+
+# --- Tests / coverage ---
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+
+# --- Autres ---
+*.bak
+*.tmp
+*.old
