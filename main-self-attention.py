@@ -22,9 +22,9 @@ print(attn_scores_2)
 #1 The second input token serves as the query.
 
 # V1 Simplifiée.
-# attn_weights_2_tmp = attn_scores_2 / attn_scores_2.sum()
-# print("Attention weights:", attn_weights_2_tmp)
-# print("Sum:", attn_weights_2_tmp.sum())
+attn_weights_2_tmp = attn_scores_2 / attn_scores_2.sum()
+print("Attention weights:", attn_weights_2_tmp)
+print("Sum:", attn_weights_2_tmp.sum())
 
 # V2 Simplifiée avec softmax.
 # def softmax_naive(x):
@@ -60,6 +60,9 @@ print(context_vec_2)
 # 1.2.2) Simplification de la multiplication de matrice. (plus rapide et plus concise)
 attn_scores = inputs @ inputs.T
 print(attn_scores)
+print(attn_scores_2)
+attn_scores_2 = attn_scores[:, 1]
+print(attn_scores_2)
 
 # 1.3) Calcul des poids d'attention avec softmax
 attn_weights = torch.softmax(attn_scores, dim=-1)
@@ -69,3 +72,7 @@ print(attn_weights)
 # On utilise simplement une multiplication de matrice.
 all_context_vecs = attn_weights @ inputs
 print(all_context_vecs)
+
+
+
+ 
