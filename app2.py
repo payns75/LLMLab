@@ -1,6 +1,8 @@
 from importlib.metadata import version
-import tiktoken
 print("tiktoken version:", version("tiktoken"))
+
+
+import tiktoken
 
 tokenizer = tiktoken.get_encoding("gpt2")
 text = (
